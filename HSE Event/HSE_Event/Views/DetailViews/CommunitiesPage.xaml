@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HSE_Event.Views.DetailViews.CommunitiesPage"
+             Title="Communities">
+    <ScrollView>
+        
+        <StackLayout BackgroundColor="White">
+
+            <SearchBar x:Name="SearchCommunity" Placeholder="Search" />
+
+            <ListView x:Name="CommunityListView" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid VerticalOptions="Center">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="65" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="{Binding ImageComList}" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" />
+                                <Label Grid.Column="1" Text="{Binding Name}" VerticalTextAlignment="Center" VerticalOptions="Center" HeightRequest="60" FontSize="Medium"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

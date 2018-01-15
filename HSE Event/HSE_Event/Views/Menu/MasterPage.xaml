@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HSE_Event.Views.Menu.MasterPage"
+             Title="MasterPage">
+
+    <ContentPage.Content>
+        <StackLayout x:Name="MasterStack" VerticalOptions="FillAndExpand">
+
+            <StackLayout x:Name="TopStack" HeightRequest="200" BackgroundColor="#1565c0">
+                <Label Text="HSE Event" 
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" 
+                       TextColor="{Binding MainTextColor}" 
+                       FontSize="Large" 
+                       VerticalTextAlignment="Center" 
+                       HorizontalTextAlignment="Center" 
+                       HeightRequest="100"/>
+            </StackLayout>
+
+            <StackLayout x:Name="MidStack" VerticalOptions="FillAndExpand">
+                <ListView x:Name="ListMenu" SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="55" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Grid.Column="0"
+                                           Source="{Binding IconSourse}" 
+                                           Margin="10,10,0,10" 
+                                           HorizontalOptions="StartAndExpand">
+                                    </Image>
+
+                                    <Label Grid.Column="1" 
+                                           Text="{Binding Title}" 
+                                           TextColor="Black" 
+                                           VerticalTextAlignment="Center"
+                                           FontSize="Medium" 
+                                           VerticalOptions="FillAndExpand"
+                                           HorizontalOptions="FillAndExpand"
+                                           Style="{DynamicResource SubtitleStyle}">
+                                        
+                                    </Label>
+                                    
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+            <StackLayout x:Name="BottomStack" VerticalOptions="EndAndExpand">
+                <Button Text="Logout" />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

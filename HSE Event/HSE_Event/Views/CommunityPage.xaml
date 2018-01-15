@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HSE_Event.Views.CommunityPage"
+             Title="{Binding TittleName}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" Padding="10,10,10,10"  Margin="0,0,0,7" BackgroundColor="White" HeightRequest="60">
+
+                    <Label x:Name="CommunityTittle" 
+                       FontSize="Large" 
+                       TextColor="Black" 
+                       VerticalOptions="FillAndExpand" 
+                       HorizontalOptions="StartAndExpand" 
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment ="Center"
+                       FontAttributes="Bold"/>
+
+                    <Image x:Name="CommunityIcon" 
+                       HeightRequest="60" 
+                       WidthRequest="60" 
+                       HorizontalOptions="End" 
+                       VerticalOptions="Start"/>
+
+                </StackLayout>
+
+                <StackLayout Padding="10,10,10,10"  Margin="0,0,0,10" BackgroundColor="White" >
+
+                    <Label x:Name="CommunityText"/>
+                    <Button Clicked="Com"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
